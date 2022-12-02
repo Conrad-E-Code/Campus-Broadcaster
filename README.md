@@ -1,9 +1,18 @@
+INDIVIDUAL GOALS
+Sinatra
+blogs
+chill
+
+Think about project, contribute to readme
+
 PROJECT Goals
 
 We are trying to make a csocial media resource similar to linked in in terms of creeting connections where alumni can help current and recent graduates.
 projects, talking, connecting.
 
 AS a user I can :
+
+LOGIN:
 
 
 ADD DATA TO SERVER: CREATE
@@ -12,7 +21,7 @@ add strings to my private table (friends)
 
 CHANGE DATA ON SERVER: UPDATE
 
-                Add my id to a table
+                Add my id to a table (join a group)
                 see my tables
                 see strings from all students in my table
                 delete my strings
@@ -31,3 +40,39 @@ DELETE DATA FROM SERVER:
 
 
                 WHEN I LOG IN I WANT TO SEE:
+
+                Aidan ideas:
+
+                Kevin Ideas:
+
+                Conrad Ideas:
+
+
+                TEAM GOALS FIRST WEEKEND
+
+post phone num to slack
+Schedule meetup  DONE sunday sometime
+Clone down project
+make your own branch
+brainstorm user stories until meetup, add custom user stories to this readme
+ on your own branch.
+
+ general brainstorming
+
+ push up changes to readme prior to meeting.
+
+meetup goals:
+CREATE RELATIONSHIP HIERARCHY FOR BACKEND DIAGRAM
+MERGE READMES at beginning of meeting
+agree on user stories.
+divide tasks by category
+assign tasks to RP's
+formulate tables
+
+Identify goals for next week
+Prioritize goals and make a roadmap.
+
+
+
+
+NEXT WEEK GOALS:
