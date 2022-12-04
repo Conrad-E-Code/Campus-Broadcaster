@@ -3,8 +3,14 @@ import React from 'react'
 function NewUser(props) {
     return (
         <div>
-        <p> hello from NewUser</p>
-        <p> I need a form with inputs here. a header and a submit button.</p>
+        <form>
+            <input >User Name</input>
+            <input> Email Addresss</input>
+            <input> Enter Password</input>
+            <input> Confirm Password</input>
+            <input> Make a Post - which redirect them to Create a Post</input>
+            <input> User Location</input>
+        </form>
         </div>
     )
 }
