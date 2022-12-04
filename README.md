@@ -7,7 +7,7 @@ Think about project, contribute to readme
 
 PROJECT Goals
 
-We are trying to make a csocial media resource similar to linked in in terms of creeting connections where alumni can help current and recent graduates.
+We are trying to make a social media resource similar to linked in in terms of creeting connections where alumni can help current and recent graduates.
 projects, talking, connecting.
 
 AS a user I can :
@@ -46,6 +46,19 @@ DELETE DATA FROM SERVER:
                 Kevin Ideas:
 
                 Conrad Ideas:
+
+                When I first visit the page I want to see a login page.
+
+                how could a login page work?
+
+                probably a fetch request. comparison with saved password. 
+
+                checking into token auth
+https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications
+
+
+
+
 
 
                 TEAM GOALS FIRST WEEKEND
