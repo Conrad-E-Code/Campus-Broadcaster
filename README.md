@@ -53,6 +53,12 @@ DELETE DATA FROM SERVER:
 
                 probably a fetch request. comparison with saved password. 
 
+                checking into token auth
+https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications
+
+
+
+
 
 
                 TEAM GOALS FIRST WEEKEND
