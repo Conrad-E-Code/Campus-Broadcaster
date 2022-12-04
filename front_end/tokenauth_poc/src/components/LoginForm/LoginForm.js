@@ -1,11 +1,12 @@
 import React from "react"
 import './LoginForm.css'
 
-function LoginForm(props) {
+function LoginForm({setToken}) {
 
     function loginFetch(e) {
         e.preventDefault()
         console.log(e)
+        setToken(true)
         const LOGIN_URL = ""
         // fetch(LOGIN_URL)
         // .then(
