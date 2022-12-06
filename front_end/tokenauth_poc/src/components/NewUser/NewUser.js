@@ -1,15 +1,17 @@
 import React from 'react'
 
 function NewUser(props) {
+    // create a post redirect?
+    // post a new user to a user table?
+    
     return (
         <div>
         <form>
             <input >User Name</input>
-            <input> Email Addresss</input>
+            <input> User Campus</input>
             <input> Enter Password</input>
             <input> Confirm Password</input>
-            <input> Make a Post - which redirect them to Create a Post</input>
-            <input> User Location</input>
+            
         </form>
         </div>
     )

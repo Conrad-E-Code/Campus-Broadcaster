@@ -47,6 +47,7 @@ DELETE DATA FROM SERVER:
 
                 Conrad Ideas:
 
+
                 When I first visit the page I want to see a login page.
 
                 how could a login page work?
@@ -63,20 +64,14 @@ https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication
 
                 TEAM GOALS FIRST WEEKEND
 
-post phone num to slack
-Schedule meetup  DONE sunday sometime
-Clone down project
-make your own branch
+
 brainstorm user stories until meetup, add custom user stories to this readme
  on your own branch.
 
  general brainstorming
 
- push up changes to readme prior to meeting.
-
 meetup goals:
 CREATE RELATIONSHIP HIERARCHY FOR BACKEND DIAGRAM
-MERGE READMES at beginning of meeting
 agree on user stories.
 divide tasks by category
 assign tasks to RP's
@@ -88,4 +83,40 @@ Prioritize goals and make a roadmap.
 
 
 
+Account creation:
+step one post to user table redirect to add picture form
+step two post to picture table redirect to first post form
+step 3 make first post redirect to dashboard
+
+
+
+
+
 NEXT WEEK GOALS:
+
+
+user table:
+has_many posts
+username:
+password:
+
+
+UserImages:
+belongs_to user
+
+
+
+campus table: 
+has many users
+has many posts through users
+user_id (foreign key)
+
+Posts Table
+belongs to a user
+belongs to a campus
+
+user_id: foreign 
+body
+date :
+author: username
+
