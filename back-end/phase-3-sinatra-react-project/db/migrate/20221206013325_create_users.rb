@@ -4,5 +4,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.string :username
       t.string :password
       t.integer :id
+      # Isn't id created for us?
+      # Also, these two tables have exactly the same info in them... so do we need them both? 
   end
 end
