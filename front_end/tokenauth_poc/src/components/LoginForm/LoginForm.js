@@ -2,6 +2,7 @@ import React from "react"
 import './LoginForm.css'
 import {useState} from "react"
 import PropTypes from 'prop-types'
+//import useToken from "../../useToken"
 
 async function loginUser(creds) {
     return fetch("http://localhost:9292/login",{
@@ -12,7 +13,7 @@ async function loginUser(creds) {
     .then( r => r.json())
 }
 
-function LoginForm({setToken, token}) {
+function LoginForm({setToken}) {
 const [formUser, setFormUser] = useState("")
 const [formPass, SetFormPass] = useState("")
 const [showBadLogin, setShowBadLogin] = useState(false)
@@ -35,7 +36,7 @@ const [showBadLogin, setShowBadLogin] = useState(false)
             "username": formUser,
             "password": formPass
         })
-        if (token === false) 
+        if (token == false) 
         {console.log(`${token} this is bad token`)
         setShowBadLogin(true)}
         else {
