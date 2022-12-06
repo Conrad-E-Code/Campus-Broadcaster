@@ -102,6 +102,7 @@ password:
 
 
 UserImages:
+image_url
 belongs_to user
 
 
@@ -109,6 +110,7 @@ belongs_to user
 campus table: 
 has many users
 has many posts through users
+has mant imags thr
 user_id (foreign key)
 
 Posts Table
