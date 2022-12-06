@@ -7,7 +7,7 @@ class LoginController < ApplicationController
         if (password_input == "1234" && user_input =="Phil")
                 true.to_json 
         else
-            msg = password_input
+            msg = false
             msg.to_json
         end
     end
