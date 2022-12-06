@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="jjjES4pSvoBlXL_CkdAW" name="Page-1">
-        <mxGraphModel dx="1054" dy="2580" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="884" dy="2580" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -17,7 +17,7 @@
                     <mxGeometry x="158" y="-990" width="100" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="10" value="&amp;nbsp;Campus&lt;br&gt;has many users&lt;br&gt;has many posts through users&lt;br&gt;&amp;nbsp;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
-                    <mxGeometry x="360" y="-990" width="100" height="80" as="geometry"/>
+                    <mxGeometry x="362" y="-990" width="100" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="11" value="&lt;ul&gt;&lt;li&gt;user has many post s&lt;/li&gt;&lt;li&gt;&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
                     <mxGeometry x="540" y="-970" width="180" height="70" as="geometry"/>
