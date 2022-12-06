@@ -12,9 +12,10 @@ async function loginUser(creds) {
     .then( r => r.json())
 }
 
-function LoginForm({setToken}) {
+function LoginForm({setToken, token}) {
 const [formUser, setFormUser] = useState("")
 const [formPass, SetFormPass] = useState("")
+const [showBadLogin, setShowBadLogin] = useState(false)
 // const loginObj = {
 //     "username": formUser,
 //     "password": formPass
@@ -22,14 +23,28 @@ const [formPass, SetFormPass] = useState("")
 
 // console.log(loginObj)
     // async function handleSubmit(e) 
+    //function showBadLogin() {
+        // if (token === false) 
+        // {console.log(`${token} this is bad token`)}
+        // else {
+        //     console.log(`${token} this is good token`)}
+    //}
     const handleSubmit = async e => {
         e.preventDefault()
-        const token = await loginUser({
+        let token = await loginUser({
             "username": formUser,
             "password": formPass
         })
+        if (token === false) 
+        {console.log(`${token} this is bad token`)
+        setShowBadLogin(true)}
+        else {
+            console.log(`${token} this is good token`)}
+    
         console.log(token)
         setToken(token)
+        //console.log(token)
+        //showBadLogin()
     }
         // console.log(e)
         // const LOGIN_URL = "changemeurl/login"
@@ -64,7 +79,8 @@ const [formPass, SetFormPass] = useState("")
                     </input>
                 </label>
                 <br />
-                <button className="login-input" type="submit"> LOGIN
+                {showBadLogin? <p className="red-text">BAD LOGIN ATTEMPT!</p> : null}
+                <button className="login-input" type="submit"> Login
                 </button>
             </form>
         </div>
