@@ -10,5 +10,8 @@ class LoginController < ApplicationController
             msg = false
             msg.to_json
         end
+
+        # Login.find_bylksjdafhlkashdflkjsahdf
+        # condition logic on fetched login matching user-input login
     end
 end
