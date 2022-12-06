@@ -14,8 +14,8 @@ function App() {
       {/* {token? null :<LoginForm setToken={setToken} />} */}
       </header>
       <Routes>
-        <Route element={token? <Dashboard/> :<LoginForm setToken={setToken}/>} path="/dashboard"></Route>
-        <Route element={token? <Preferences/> :<LoginForm setToken={setToken}/>} path="/preferences"></Route>
+        <Route element={token? <Dashboard/> :<LoginForm setToken={setToken} token={token}/>} path="/dashboard"></Route>
+        <Route element={token? <Preferences/> :<LoginForm setToken={setToken} token={token}/>} path="/preferences"></Route>
       </Routes>
       
     </div>
