@@ -3,8 +3,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
     create_table :users do |t|
       t.string :username
       t.string :password
-      t.integer :id
-      # Isn't id created for us?
-      # Also, these two tables have exactly the same info in them... so do we need them both? 
+      t.integer :school_id
+    end
   end
 end

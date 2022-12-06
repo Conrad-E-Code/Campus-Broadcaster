@@ -4,8 +4,9 @@ class LoginController < ApplicationController
     post "/login" do
         password_input = params[:password]
         user_input = params[:username]
-        if (password_input == "1234" && user_input =="Phil")
-                true.to_json 
+        auth_user = User.find_by "username == ?", user_input
+        if (password_input == auth_user.password && user_input == auth_user.username)
+                {token: "test123"}.to_json 
         else
             msg = false
             msg.to_json
