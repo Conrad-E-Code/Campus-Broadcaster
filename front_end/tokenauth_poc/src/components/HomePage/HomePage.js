@@ -10,11 +10,17 @@ function HomePage(props) {
 
 
     return (
-        <div className="home-page">Home <br></br>
-        <Link to="/users/new">
-            <button>Create Account</button>
+    <div className="home-page">Home 
+        <br></br>
+        <Link to="/dashboard">
+        <button>Login</button>
         </Link>
-        </div>
+        <br></br>
+        <Link to="/users/new">
+        <button>Create Account</button>
+        </Link>
+        <br></br>
+    </div>
     )
 }
 

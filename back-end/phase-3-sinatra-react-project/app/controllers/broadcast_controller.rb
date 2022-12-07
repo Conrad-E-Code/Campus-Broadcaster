@@ -6,4 +6,16 @@ class BroadcastController < ApplicationController
         newBroadcast = Broadcast.create content:params[:content], user_id:num
         newBroadcast.to_json
     end
+
+    post "/test" do
+        client_id = params[:token]
+        send_it = Broadcast.find_by "user_id =?", client_id
+        send_it.to_json
+    end
+
+    get "/test/:id" do
+        client_broadcasts = Broadcast.find(params[:id])
+        client_broadcasts.to_json
+    end
+
 end

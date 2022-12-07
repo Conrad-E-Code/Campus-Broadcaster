@@ -2,18 +2,21 @@ import React from "react"
 import './LoginForm.css'
 import {useState} from "react"
 import PropTypes from 'prop-types'
+//import {useNavigate} from "react-router-dom"
+//import Dashboard from "../Dashboard/Dashboard"
 //import useToken from "../../useToken"
 
-async function loginUser(creds) {
+async function loginUser(creds, token) {
     return fetch("http://localhost:9292/login",{
         method:"POST",
         headers:{"content-type": "application/json"},
         body: JSON.stringify(creds)
     })
     .then( r => r.json())
+    .then()
 }
 
-function LoginForm({setToken, setFormUser, formUser}) {
+function LoginForm({token, setToken, setFormUser, formUser}) {
     //const [formUser, setFormUser] = useState("")
 const [formPass, SetFormPass] = useState("")
 const [showBadLogin, setShowBadLogin] = useState(false)

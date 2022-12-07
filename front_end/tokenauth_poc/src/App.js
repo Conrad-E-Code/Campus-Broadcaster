@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route, Link } from "react-router-dom"
+import { Routes, Route, Link,} from "react-router-dom"
 import LoginForm from './components/LoginForm/LoginForm';
 import Dashboard from './components/Dashboard/Dashboard';
 import Preferences from './components/Preferences/Preferences';
@@ -21,6 +21,8 @@ import BroadcastNews from './components/BroadcastNews/BroadcastNews'
 function App() {
   const {token, setToken} = useToken()
   const [formUser, setFormUser] = useState("")
+  // const params = useParams()
+  // console.log(params)
 
   // useEffect(() => {
   //   setFormUser(JSON.parse(window.localStorage.getItem('formUser')))
@@ -39,19 +41,19 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h2>Campus Broadcaster</h2>
-        <button onClick={() => console.log(token)} >Try Me!</button>
+        {/* <button onClick={() => console.log(token)} >Try Me!</button> */}
       {/* {token? null :<LoginForm setToken={setToken} />} */}
       </header>
       <Routes>
-        <Route element={token? <Dashboard/> :
-        <LoginForm setFormUser={setFormUser} formUser={formUser} setToken={setToken} />} path="/dashboard"></Route>
+        <Route element={token? <Dashboard token={token}/> :
+        <LoginForm token={token}setFormUser={setFormUser} formUser={formUser} setToken={setToken} />} path="/dashboard"></Route>
         <Route element={token? <Preferences/> :
-        <LoginForm setFormUser={setFormUser} formUser={formUser} setToken={setToken} />} path="/preferences"></Route>
+        <LoginForm token={token}setFormUser={setFormUser} formUser={formUser} setToken={setToken} />} path="/preferences"></Route>
         <Route element={token? <BroadcastNews token={token}/> :
-        <LoginForm setFormUser={setFormUser} formUser={formUser} setToken={setToken} />} path="/broadcasts/new"></Route>
+        <LoginForm token={token} setFormUser={setFormUser} formUser={formUser} setToken={setToken} />} path="/broadcasts/new"></Route>
         <Route element={<NewUser/>} path="/users/new"></Route>
         
-        <Route element={<HomePage/>} path="/"></Route>
+        <Route element={token?<Dashboard token={token} />:<HomePage/>} path="/"></Route>
         
       </Routes>
       
