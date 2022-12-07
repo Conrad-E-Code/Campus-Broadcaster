@@ -15,3 +15,4 @@ use Rack::JSONBodyParser
 run ApplicationController
 use LoginController
 use NewUserController
+use BroadcastController

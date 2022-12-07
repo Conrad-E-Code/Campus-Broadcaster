@@ -18,7 +18,7 @@ function BroadcastNews({token}) {
         }    
         console.log(BroadcastObj)    
         //what's the URL?
-        // fetch('http://localhost:9292/broadcasts', configObj)
+        fetch('http://localhost:9292/broadcasts', configObj)
     }
 
     return (
