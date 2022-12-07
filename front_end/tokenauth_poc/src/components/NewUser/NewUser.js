@@ -1,5 +1,5 @@
 import {useState} from 'react'
-
+import {useNavigate} from "react-router-dom"
 
 
 function NewUser(props) {
@@ -9,6 +9,8 @@ const [newUser, setNewUser] = useState("")
 const [newCampus, setNewCampus] = useState("")
 const [newPassword, setNewPassword] = useState("")
 const [repeatPassword, setRepeatPassword] = useState("")
+
+const history = useNavigate()
 
 const newUserObj = {username: newUser, school_id: newCampus, password: newPassword}
 
@@ -24,6 +26,9 @@ const handleSubmit = (e) => {
     console.log(e)
     if (newPassword === repeatPassword) {
         fetch('http://localhost:9292/users', configObj)
+
+        .then(r => (r.json))
+        .then(history("/dashboard"))
     }
 }   
     return (
