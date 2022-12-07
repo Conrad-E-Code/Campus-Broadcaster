@@ -13,8 +13,8 @@ async function loginUser(creds) {
     .then( r => r.json())
 }
 
-function LoginForm({setToken}) {
-const [formUser, setFormUser] = useState("")
+function LoginForm({setToken, setFormUser, formUser}) {
+    //const [formUser, setFormUser] = useState("")
 const [formPass, SetFormPass] = useState("")
 const [showBadLogin, setShowBadLogin] = useState(false)
 // const loginObj = {
