@@ -5,8 +5,9 @@ class LoginController < ApplicationController
         password_input = params[:password]
         user_input = params[:username]
         auth_user = User.find_by "username == ?", user_input
+        client_id = auth_user.id
         if (password_input == auth_user.password && user_input == auth_user.username)
-                {token: "test123"}.to_json 
+                {token: "#{client_id}"}.to_json 
         else
             msg = false
             msg.to_json
