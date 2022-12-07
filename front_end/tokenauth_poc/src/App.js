@@ -1,9 +1,11 @@
 import './App.css';
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, Link } from "react-router-dom"
 import LoginForm from './components/LoginForm/LoginForm';
 import Dashboard from './components/Dashboard/Dashboard';
 import Preferences from './components/Preferences/Preferences';
 import useToken from './useToken';
+import NewUser from './components/NewUser/NewUser';
+import HomePage from './components/HomePage/HomePage';
 //import {useState} from 'react'
 
 // function setToken(userToken) {
@@ -25,12 +27,16 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h2> Hello from header</h2>
+        <h2>Campus Broadcaster</h2>
       {/* {token? null :<LoginForm setToken={setToken} />} */}
       </header>
       <Routes>
         <Route element={token? <Dashboard/> :<LoginForm setToken={setToken} />} path="/dashboard"></Route>
         <Route element={token? <Preferences/> :<LoginForm setToken={setToken} />} path="/preferences"></Route>
+        <Route element={<NewUser/>} path="/users/new"></Route>
+        
+        <Route element={<HomePage/>} path="/"></Route>
+        
       </Routes>
       
     </div>

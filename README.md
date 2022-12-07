@@ -122,3 +122,7 @@ body
 date :
 author: username
 
+Create New User:
+Post lunch make 
+
+From front end we are sending a object to the backend with key of username and password, value are from form. Backend takes post and requests the database to check if user name and password exists in the database. 
