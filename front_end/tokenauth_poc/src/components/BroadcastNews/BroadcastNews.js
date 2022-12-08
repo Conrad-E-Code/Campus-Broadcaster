@@ -1,11 +1,11 @@
-// import {useNavigate} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 import { useState } from "react";
 
 
 // we need the user_Id passed into this.
 function BroadcastNews({token}) {
 
-    // const history = useNavigate()
+    const history = useNavigate()
     const [content, setContent] = useState("");
 
     function handleBroadcastSubmit(e){
@@ -20,9 +20,9 @@ function BroadcastNews({token}) {
         console.log(BroadcastObj)    
         //what's the URL?
         fetch('http://localhost:9292/broadcasts', configObj)
-        //history("/dashboard")
-        // .then(r => (r.json))
-        // .then (r => history("/dashboard"))
+        
+        .then(r => (r.json))
+        .then(history("/dashboard"))
     }
 
     return (
@@ -31,6 +31,7 @@ function BroadcastNews({token}) {
           <label>Share some news:</label>
           <br></br>
           <textarea
+            required="true"
             id="broadcast-text"
             placeholder="Start typing..."
             rows={3}

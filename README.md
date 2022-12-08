@@ -21,8 +21,7 @@ add strings to my private table (friends)
 
 CHANGE DATA ON SERVER: UPDATE
 
-                Add my id to a table (join a group)
-                see my tables
+                
                 see strings from all students in my table
                 delete my strings
 
@@ -48,13 +47,7 @@ DELETE DATA FROM SERVER:
                 Conrad Ideas:
 
 
-                When I first visit the page I want to see a login page.
-
-                how could a login page work?
-
-                probably a fetch request. comparison with saved password. 
-
-                checking into token auth
+               
 https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications
 
 
@@ -63,22 +56,6 @@ https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication
 
 
                 TEAM GOALS FIRST WEEKEND
-
-
-brainstorm user stories until meetup, add custom user stories to this readme
- on your own branch.
-
- general brainstorming
-
-meetup goals:
-CREATE RELATIONSHIP HIERARCHY FOR BACKEND DIAGRAM
-agree on user stories.
-divide tasks by category
-assign tasks to RP's
-formulate tables
-
-Identify goals for next week
-Prioritize goals and make a roadmap.
 
 
 
@@ -95,34 +72,23 @@ step 3 make first post redirect to dashboard
 NEXT WEEK GOALS:
 
 
-user table:
-has_many posts
-username:
-password:
 
 
-UserImages:
-image_url
-belongs_to user
+We need to make an account for phil and have some fun posts
+John 'im gonnna get banged up'
+
+Log out - Conrad
+delete post - Kevin
+delete account - Kevin
+make it look better(put the posts in a card) - Aidan
+Add like button
+Profile Picture
 
 
+Kevin: Forresty green, red
+Conrad: Green, camo 
+Aidan: Purple
 
-campus table: 
-has many users
-has many posts through users
-has mant imags thr
-user_id (foreign key)
+black and teal
 
-Posts Table
-belongs to a user
-belongs to a campus
-
-user_id: foreign 
-body
-date :
-author: username
-
-Create New User:
-Post lunch make 
-
-From front end we are sending a object to the backend with key of username and password, value are from form. Backend takes post and requests the database to check if user name and password exists in the database. 
+picture of cd radio (show posts in the screen area)
