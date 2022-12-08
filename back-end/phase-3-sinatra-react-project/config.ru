@@ -16,3 +16,4 @@ run ApplicationController
 use LoginController
 use NewUserController
 use BroadcastController
+use ImageController

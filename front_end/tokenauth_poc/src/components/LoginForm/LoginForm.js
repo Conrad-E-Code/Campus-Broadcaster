@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 //import Dashboard from "../Dashboard/Dashboard"
 //import useToken from "../../useToken"
 
-async function loginUser(creds, token) {
+async function loginUser(creds) {
     return fetch("http://localhost:9292/login",{
         method:"POST",
         headers:{"content-type": "application/json"},

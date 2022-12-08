@@ -55,10 +55,11 @@ function App() {
         <Route element={<NewUser/>} path="/users/new"></Route>
         <Route element={token? <AddProfilePic token={token} /> :
         <LoginForm token={token}setFormUser={setFormUser} formUser={formUser} setToken={setToken} />} path="/pictures/new"></Route>
-        <Route element={token?<Dashboard token={token} />:<HomePage/>} path="/"></Route>
+        <Route element={token?<Dashboard token={token}/>:<HomePage/>} path="/"></Route>
         
       </Routes>
-      
+      {token? <button onClick={() => {sessionStorage.clear()
+      document.location.reload()}} >Logout</button> : null}
     </div>
   );
   }
