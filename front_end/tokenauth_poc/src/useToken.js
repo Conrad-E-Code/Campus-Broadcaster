@@ -16,5 +16,4 @@ function useToken() {
     token
   }
 }
-
 export default useToken
