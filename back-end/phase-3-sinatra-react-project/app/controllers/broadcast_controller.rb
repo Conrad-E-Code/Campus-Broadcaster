@@ -14,4 +14,10 @@ class BroadcastController < ApplicationController
         client_instance = User.find(params[:id])
         client_instance.school.page_cast.reverse.to_json
     end
+
+    delete '/broadcasts/:id' do 
+        broadcast = Broadcast.find_by("id=?", params[:id])
+        broadcast.destroy
+        "You're gone!"
+      end 
 end
