@@ -15,7 +15,7 @@ class BroadcastController < ApplicationController
 
     get "/test/:id" do
         client_instance = User.find(params[:id])
-        client_instance.school.page_cast.to_json
+        client_instance.school.page_cast.reverse.to_json
     end
 
 end

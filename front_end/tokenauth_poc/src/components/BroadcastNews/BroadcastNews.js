@@ -31,6 +31,7 @@ function BroadcastNews({token}) {
           <label>Share some news:</label>
           <br></br>
           <textarea
+            required="true"
             id="broadcast-text"
             placeholder="Start typing..."
             rows={3}
