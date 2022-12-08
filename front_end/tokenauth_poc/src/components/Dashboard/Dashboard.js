@@ -26,7 +26,7 @@ function Dashboard({token}) {
     // POST WORKING ^^
 
     useEffect(() => {
-        fetch(`http://localhost:9292/test/${token}`)
+        fetch(`http://localhost:9292/broadcasts/${token}`)
         .then(r => r.json())
         .then(data => {
             setFeed(data)

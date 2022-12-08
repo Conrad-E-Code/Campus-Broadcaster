@@ -2,7 +2,7 @@ import React from "react"
 //import {useNavigate} from "react-router-dom"
 import {useState} from "react"
 
-function AddProfilePic(props) {
+function AddProfilePic({token}) {
 
     //const history = useNavigate()
     const [newPicURL, setNewPicURL] = useState("")
@@ -13,15 +13,18 @@ function AddProfilePic(props) {
         // redirect to next step if successful
         // adding a column to user table?
 
-        console.log(e.target.value)
-        const picSendURL = "URLforPic"
+        const picSendObj = {
+            image_url: `${newPicURL}`,
+            user_id: token
+        }
+        const picSendURL = "http://localhost:9292/pictures/new"
         const configObj = {method:"POST",
         headers:{"content-type": "application/json"},
-        body: JSON.stringify("test")}
+        body: JSON.stringify(picSendObj)}
 
-        // fetch(picSendURL, configObj)
-        // .then(r => r.json())
-        // .then(history("/dashboard"))
+         fetch(picSendURL, configObj)
+         .then(r => r.json())
+         .then(rdata => console.log(rdata))
 
     }
 

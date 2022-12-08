@@ -10,8 +10,10 @@ function BroadcastNews({token}) {
 
     function handleBroadcastSubmit(e){
         e.preventDefault();
-        const BroadcastObj = {content: content, user_id: token}
-
+        const BroadcastObj = {
+          content: content,
+          user_id: token
+        }
         const configObj = {
             method: 'POST', 
             headers: {"content-type": "application/json"},

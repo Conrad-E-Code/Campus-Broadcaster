@@ -12,8 +12,11 @@ const [repeatPassword, setRepeatPassword] = useState("")
 
 const history = useNavigate()
 
-const newUserObj = {username: newUser, school_id: newCampus, password: newPassword}
-
+const newUserObj = {
+    username: newUser,
+    school_id: newCampus,
+     password: newPassword
+}
 const configObj = {
     method: 'POST', 
     headers: {"content-type": "application/json"},
