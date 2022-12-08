@@ -17,3 +17,4 @@ use LoginController
 use NewUserController
 use BroadcastController
 use ImageController
+use PiclikeController
