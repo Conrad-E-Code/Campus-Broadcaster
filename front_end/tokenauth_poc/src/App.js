@@ -8,6 +8,7 @@ import NewUser from './components/NewUser/NewUser';
 import HomePage from './components/HomePage/HomePage';
 import {useState} from 'react'
 import BroadcastNews from './components/BroadcastNews/BroadcastNews'
+import AddProfilePic from './components/AddProfilePic/AddProfilePic'
 
 // function setToken(userToken) {
 //   sessionStorage.setItem('token', JSON.stringify(userToken))
@@ -52,7 +53,8 @@ function App() {
         <Route element={token? <BroadcastNews token={token}/> :
         <LoginForm token={token} setFormUser={setFormUser} formUser={formUser} setToken={setToken} />} path="/broadcasts/new"></Route>
         <Route element={<NewUser/>} path="/users/new"></Route>
-        
+        <Route element={token? <AddProfilePic token={token} /> :
+        <LoginForm token={token}setFormUser={setFormUser} formUser={formUser} setToken={setToken} />} path="/pictures/new"></Route>
         <Route element={token?<Dashboard token={token} />:<HomePage/>} path="/"></Route>
         
       </Routes>
