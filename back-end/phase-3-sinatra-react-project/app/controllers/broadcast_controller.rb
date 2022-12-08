@@ -2,7 +2,7 @@ class BroadcastController < ApplicationController
     post "/broadcasts" do
         client_id = params[:user_id]
         num = client_id.to_i
-        newBroadcast = Broadcast.create content:params[:content], user_id:num
+        newBroadcast = Broadcast.create content:params[:content], user_id:num, likes:params[:likes]
         newBroadcast.to_json
     end
     # post "/test" do
@@ -20,4 +20,10 @@ class BroadcastController < ApplicationController
         broadcast.destroy
         "You're gone!"
       end 
+
+    patch "/broadcasts/:id" do
+        broadcast = Broadcast.find_by("id=?", params[:id])
+        broadcast.update likes: params[:likes]
+        broadcast.to_json
+    end
 end

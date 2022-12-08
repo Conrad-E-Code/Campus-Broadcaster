@@ -10,7 +10,7 @@ function Dashboard({token}) {
         console.log(cast)
         return(
             //need a key at some point
-            <Signal key={cast.id} signalId={cast.id} content={cast.content} setFeed={setFeed} feed={feed}
+            <Signal likes={cast.likes} key={cast.id} signalId={cast.id} content={cast.content} setFeed={setFeed} feed={feed}
             userId={cast.user_id} createdAt={cast.created_at} username={cast.username} />
         )
     })
@@ -47,7 +47,7 @@ function Dashboard({token}) {
         <br></br>
         <button><Link to="/broadcasts/new">Share it!</Link></button>
         <button><Link to="/pictures/new">Post a Pic</Link></button>
-        <Link to="/preferences"></Link>
+        <Link to="/pictures"> SEE PICS</Link>
         </div>
     )
 }

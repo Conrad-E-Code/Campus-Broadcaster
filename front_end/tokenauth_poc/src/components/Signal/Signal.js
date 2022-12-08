@@ -1,10 +1,26 @@
 import React, { useState } from 'react'
 
-function Signal({content, userId, signalId, createdAt, username, feed, setFeed}){
+function Signal({content, userId, signalId, createdAt, username, feed, setFeed, likes}){
 
 //const [test, setTest] = useState(true)
 
 const feedMinusOne = feed.filter((sig) => sig.id !== signalId)
+
+function handleLike() {
+    console.log(`Patch to 9292/${signalId} coming soon!`)
+
+    // fetch post
+    const PATCH_URL = `http://localhost:9292/broadcasts/${signalId}`
+    const likeObj = {likes: likes + 1}
+    const patchObj = {
+        method: "PATCH",
+        headers: {"Content-type" : "application/json"},
+    body: JSON.stringify(likeObj)
+}
+    fetch(PATCH_URL, patchObj)
+    .then(r => r.json())
+    .then(data => console.log(data))
+}
 
 function handleDeleteSignal(){
 
@@ -23,7 +39,11 @@ function handleDeleteSignal(){
 
 return(
     <div>
-        <p>{username} said {content} at {createdAt} <button onClick={handleDeleteSignal}>X</button></p>
+        <p>{username} said {content} at {createdAt} likes: {likes}
+            <button onClick={handleDeleteSignal}>
+            X</button>
+             <button onClick={handleLike} > 👍</button>
+             <button onClick={() => alert("Boooooooo!")} >👎</button></p>
     </div>
 )
 

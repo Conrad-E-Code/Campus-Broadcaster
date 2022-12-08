@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_06_165134) do
+ActiveRecord::Schema.define(version: 2022_12_08_195337) do
 
   create_table "broadcasts", force: :cascade do |t|
     t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
+    t.integer "likes"
   end
 
   create_table "images", force: :cascade do |t|
