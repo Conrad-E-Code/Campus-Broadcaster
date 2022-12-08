@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import {Link} from "react-router-dom"
 import Channel from '../Channel/Channel'
+import Signal from '../Signal/Signal'
 
 function Dashboard({token}) {
     const [feed, setFeed] = useState([])
     const mappedFeed = feed.map((cast) => {
+        console.log(cast)
         return(
             //need a key at some point
-            <p>{cast}</p>
+            <Signal key={cast.id} signalId={cast.id} content={cast.content} userId={cast.user_id} createdAt={cast.created_at} username={cast.username}/>
         )
     })
     const tokenObj = {
