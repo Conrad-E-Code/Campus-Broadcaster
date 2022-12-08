@@ -5,11 +5,13 @@ import Signal from '../Signal/Signal'
 
 function Dashboard({token}) {
     const [feed, setFeed] = useState([])
+
     const mappedFeed = feed.map((cast) => {
         console.log(cast)
         return(
             //need a key at some point
-            <Signal key={cast.id} signalId={cast.id} content={cast.content} userId={cast.user_id} createdAt={cast.created_at} username={cast.username}/>
+            <Signal key={cast.id} signalId={cast.id} content={cast.content} setFeed={setFeed} feed={feed}
+            userId={cast.user_id} createdAt={cast.created_at} username={cast.username} />
         )
     })
     const tokenObj = {
