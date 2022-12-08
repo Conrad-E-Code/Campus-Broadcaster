@@ -1,18 +1,23 @@
-import {useNavigate} from "react-router-dom"
+import React from "react"
+//import {useNavigate} from "react-router-dom"
+import {useState} from "react"
 
 function AddProfilePic(props) {
 
-    const history = useNavigate()
+    //const history = useNavigate()
+    const [newPicURL, setNewPicURL] = useState("")
 
    function handlePicSubmit(e){
+        e.preventDefault()
         //POST picture
         // redirect to next step if successful
         // adding a column to user table?
-        console.log(e)
+
+        console.log(e.target.value)
         const picSendURL = "URLforPic"
-        configObj = {method:"POST",
+        const configObj = {method:"POST",
         headers:{"content-type": "application/json"},
-        body: JSON.stringify(buildFormData)}
+        body: JSON.stringify("test")}
 
         // fetch(picSendURL, configObj)
         // .then(r => r.json())
@@ -31,7 +36,7 @@ function AddProfilePic(props) {
             <form onSubmit={(e) => handlePicSubmit(e)}>
                 <label>
                     Paste your link here:
-                <input type="text"> </input>
+                <input type="text" onChange={(e) => setNewPicURL(e.target.value)}></input>
                 </label>
                 <button type="submit">Submit Pic</button>
             </form>
@@ -39,3 +44,4 @@ function AddProfilePic(props) {
     )
 }
 
+export default AddProfilePic

@@ -92,3 +92,7 @@ Aidan: Purple
 black and teal
 
 picture of cd radio (show posts in the screen area)
+
+Stretch goals
+
+Multi-step account creation process that includes adding a picture, etc.
