@@ -11,7 +11,7 @@ function Pictures({token}) {
         const filterlikes = picLike.filter((pl) => {
             return pic.id === pl.image_id
         })
-    return <PicModule filterlikes={filterlikes} key={pic.id} image_url={pic.image_url} user_id={pic.user_id} id={pic.id} token={token}/>
+    return <PicModule setpiclike={setPicLike} picLike={picLike} filterlikes={filterlikes} key={pic.id} image_url={pic.image_url} user_id={pic.user_id} id={pic.id} token={token}/>
 })
     useEffect(() => {
         fetch("http://localhost:9292/pictures")

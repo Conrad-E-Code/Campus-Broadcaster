@@ -6,7 +6,11 @@ class PiclikeController < ApplicationController
         unless restricted != nil
 
     a = Piclike.create user_id:params[:user_id], image_id:params[:image_id]
-    a.to_json
+    #a.to_json
+    b= User.find_by id: params[:user_id]
+    b.username
+    client_response = {liker_user: b.username, user_id:params[:user_id], image_id:params[:image_id]}
+    client_response.to_json
         else
             "ERROR YOU CANT LIKE A PIC MORE THAN ONCE".to_json
     end

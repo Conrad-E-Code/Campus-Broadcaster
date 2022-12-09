@@ -110,7 +110,7 @@ function Dashboard({ token }) {
         <Link to="/pictures/new">Post a Pic</Link>
       </button>
       <Link to="/preferences"></Link>
-      <Link to="/pictures">SEE PICS</Link>
+      <button><Link to="/pictures">See Pics</Link></button>
     </div>
   );
 }
