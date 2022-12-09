@@ -48,7 +48,7 @@ function App() {
       <Routes>
         <Route element={token? <Dashboard token={token}/> :
         <LoginForm token={token}setFormUser={setFormUser} formUser={formUser} setToken={setToken} />} path="/dashboard"></Route>
-        <Route element={token? <Pictures/> :
+        <Route element={token? <Pictures token={token}/> :
         <LoginForm token={token}setFormUser={setFormUser} formUser={formUser} setToken={setToken} />} path="/pictures"></Route>
         <Route element={token? <BroadcastNews token={token}/> :
         <LoginForm token={token} setFormUser={setFormUser} formUser={formUser} setToken={setToken} />} path="/broadcasts/new"></Route>
