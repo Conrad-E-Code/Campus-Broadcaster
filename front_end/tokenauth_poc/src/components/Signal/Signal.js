@@ -3,7 +3,8 @@ function Signal({content, userId, signalId, createdAt, username}){
 
 return(
     <div>
-        <p>{username} said {content} at {createdAt}</p>
+        <p class="cast-card">{username}:<br/>{content} 
+        <br/>{createdAt}</p>
     </div>
 )
 
