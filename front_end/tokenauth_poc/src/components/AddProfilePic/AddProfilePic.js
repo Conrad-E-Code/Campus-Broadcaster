@@ -1,6 +1,7 @@
 import React from "react"
 //import {useNavigate} from "react-router-dom"
 import {useState} from "react"
+import "../../App.css"
 
 function AddProfilePic({token}) {
 
@@ -29,7 +30,7 @@ function AddProfilePic({token}) {
     }
 
     return(
-        <div>
+        <div className="img-url">
             <h1>Add a Link to Your Profile Pic</h1>
             <h3> Default pics:</h3>
             <ul>
@@ -41,7 +42,7 @@ function AddProfilePic({token}) {
                     Paste your link here:
                 <input type="text" onChange={(e) => setNewPicURL(e.target.value)}></input>
                 </label>
-                <button type="submit">Submit Pic</button>
+                <button className="submit-pic" type="submit">Submit Pic</button>
             </form>
         </div>
     )

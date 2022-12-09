@@ -81,7 +81,7 @@ function Dashboard({ token }) {
 
   return (
     <div className="dashboard">
-      <br></br>
+      
       <h2 className="head">BroadCaster</h2>
       <br></br>
       {/* <img alt="pager" src="https://s.isanook.com/an/0/rp/rc/w300h200/yatxacm1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2FuLzAvdmFsZW50aW5lL3N0YXRpYy9pbWFnZXMvMjAyMi9wYWdlci9wYWdlcl8xLnBuZw==.png"></img> */}
@@ -103,14 +103,19 @@ function Dashboard({ token }) {
       </div>
       
       <br></br>
-      <button>
+      <button className="share-it">
         <Link to="/broadcasts/new">Share it!</Link>
       </button>
-      <button>
-        <Link to="/pictures/new">Post a Pic</Link>
+      <button className="post-pic">
+        <Link to="/pictures/new" >Post a Pic</Link>
       </button>
+      <br></br>
       <Link to="/preferences"></Link>
-      <button><Link to="/pictures">See Pics</Link></button>
+
+
+      <Link to="/pictures" className='picture-link'>SEE PICS</Link>
+      <br></br>
+
     </div>
   );
 }

@@ -31,6 +31,9 @@
   position: relative;
   width: 80%;
   margin: auto;
+  border-radius: 10px;
+  outline-style: groove;
+  outline-width: 3px;
 }
 
 .App-link {
@@ -57,7 +60,7 @@
   color: rgb(14, 15, 14);
   position: relative;
   border-radius: 0px;
-  height: 195px;
+  height: 140px;
   width: 200px;
   margin: auto;
   padding: 10px;
@@ -75,7 +78,7 @@
   font-family: "DS-DIGIB";
   background-color: hsl(96, 92%, 60%);
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -87,8 +90,9 @@
   margin: auto;
   padding: 10px;
   outline-style: groove;
-  outline-width: 2px;
-  size: absolute;
+  outline-width: 3px;
+  size: fixed;
+  
   
 
   
@@ -131,7 +135,7 @@
 .down-post {
   background-color: transparent;
   position: absolute;
-  top: 160px;
+  top: 145px;
   right: 15px;
   padding: 30px 10px;
   border-color: transparent;
@@ -140,7 +144,7 @@
 .up-post {
   background-color: transparent;
   position: absolute;
-  top: 95px;
+  top: 80px;
   right: 15px;
   padding: 30px 10px;
   border-color: transparent;
@@ -148,12 +152,14 @@
 
 .likes {
   position: absolute;
-  top: 230px
+  top: 195px;
+  left: 110px;
+  font-size: 25px;
 }
 
 .delete-button {
   position: absolute;
-  top: 207px;
+  top: 186px;
   right: 87px;
   background-color: transparent;
   border-color: transparent;
@@ -161,28 +167,29 @@
 
 .like-button {
   position: absolute;
-  top: 200px;
+  top: 180px;
   right: 140px;
   padding: 1px 15px;
   border-color: grey;
   background-color: rgb(69, 69, 66);
-  font-size: large;
+  font-size: 15px;
 }
 
 .dislike-button {
   position: absolute;
-  top: 200px;
+  top: 180px;
   right: 200px;
   padding: 1px 15px;
   border-color: grey;
-  font-size: large;
+  font-size: 15px;
   background-color:rgb(69, 69, 66);
 }
 
 .head {
   font-family: "DS-DIGIB";
   background-color: hsl(96, 92%, 60%);
-  
+  outline-style: groove;
+  outline-width: 3px;
   border-color: grey;
   border-radius: 10px;
   width: 40%;
@@ -195,4 +202,211 @@ body {
   height: 800px;
   background-position: center;
   background-size: cover;
+}
+
+.picture-link {
+  font-family: "DS-DIGIB";
+  background-color: hsl(96, 92%, 60%);
+  outline-style: groove;
+  outline-width: 2.4px;
+  outline-color: black;
+  border-radius: 8px;
+  width: auto;
+  margin: auto;
+}
+
+.post-pic {
+  font-family: "DS-DIGIB";
+  background-color: hsl(96, 92%, 60%);
+  outline-style: groove;
+  outline-width: 1px;
+  outline-color: grey;
+  border-radius: 8px;
+  width: auto;
+  margin: auto;
+}
+
+.share-it {
+  font-family: "DS-DIGIB";
+  background-color: hsl(96, 92%, 60%);
+  outline-style: groove;
+  outline-width: 1px;
+  outline-color: grey;
+  border-radius: 8px;
+  width: auto;
+  margin: auto;
+}
+
+.logout {
+  font-family: "DS-DIGIB";
+  background-color: hsl(96, 92%, 60%);
+  outline-style: groove;
+  outline-width: 1px;
+  outline-color: grey;
+  border-radius: 8px;
+  width: auto;
+  margin: auto;
+}
+
+.see-this {
+  font-family: "DS-DIGIB";
+  background-color: hsl(96, 92%, 60%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(14, 15, 14);
+  position: relative;
+  width: 60%;
+  margin: auto;
+  border-radius: 10px;
+  outline-style: groove;
+  outline-width: 3px;
+
+}
+
+.credentials {
+  font-family: "DS-DIGIB";
+  background-color: hsl(166, 70%, 62%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(14, 15, 14);
+  position: relative;
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  outline-style: groove;
+  outline-width: 3px;
+}
+
+#login-form-button {
+  font-family: "DS-DIGIB";
+  background-color: hsl(96, 92%, 60%);
+  outline-style: groove;
+  outline-width: 1px;
+  outline-color: grey;
+  border-radius: 8px;
+  width: auto;
+  margin: auto;
+}
+
+.share-news {
+  font-family: "DS-DIGIB";
+  background-color: hsl(166, 70%, 62%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(14, 15, 14);
+  position: relative;
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  outline-style: groove;
+  outline-width: 3px;
+}
+
+.home-page {
+  font-family: "DS-DIGIB";
+  background-color: hsl(166, 70%, 62%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(14, 15, 14);
+  position: relative;
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  outline-style: groove;
+  outline-width: 3px;
+}
+
+.home-login {
+  font-family: "DS-DIGIB";
+  background-color: hsl(96, 92%, 60%);
+  outline-style: groove;
+  outline-width: 1px;
+  outline-color: grey;
+  border-radius: 8px;
+  width: auto;
+  margin: auto;
+}
+
+.home-create {
+  font-family: "DS-DIGIB";
+  background-color: hsl(96, 92%, 60%);
+  outline-style: groove;
+  outline-width: 1px;
+  outline-color: grey;
+  border-radius: 8px;
+  width: auto;
+  margin: auto;
+}
+
+.new-account {
+  font-family: "DS-DIGIB";
+  background-color: hsl(96, 92%, 60%);
+  outline-style: groove;
+  outline-width: 3px;
+  border-color: grey;
+  border-radius: 10px;
+  width: 200px;
+  margin: auto;
+}
+
+.new-submit {
+  font-family: "DS-DIGIB";
+  background-color: hsl(96, 92%, 60%);
+  outline-style: groove;
+  outline-width: 1px;
+  outline-color: grey;
+  border-radius: 8px;
+  width: auto;
+  margin: auto;
+}
+
+.enter-username {
+  font-family: "DS-DIGIB";
+  background-color: hsl(166, 70%, 62%);
+  outline-style: groove;
+  outline-width: 1px;
+  outline-color: grey;
+  border-radius: 8px
+}
+
+.enter-password {
+  font-family: "DS-DIGIB";
+  background-color: hsl(166, 70%, 62%);
+  outline-style: groove;
+  outline-width: 1px;
+  outline-color: grey;
+  border-radius: 8px
+}
+
+.img-url {
+  font-family: "DS-DIGIB";
+  background-color: hsl(166, 70%, 62%);
+  font-size: large;
+  outline-style: groove;
+  outline-width: 1px;
+  outline-color: grey;
+  border-radius: 8px
+}
+
+.submit-pic {
+  font-family: "DS-DIGIB";
+  background-color: hsl(96, 92%, 60%);
+  outline-style: groove;
+  outline-width: 1px;
+  outline-color: grey;
+  border-radius: 8px;
+  width: auto;
+  margin: auto;
 }
