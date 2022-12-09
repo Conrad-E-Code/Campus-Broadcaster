@@ -59,7 +59,7 @@ function App() {
         
       </Routes>
       {token? <button onClick={() => {sessionStorage.clear()
-      document.location.reload()}} >Logout</button> : null}
+      document.location.reload()}}>Logout</button> : null}
     </div>
   );
   }

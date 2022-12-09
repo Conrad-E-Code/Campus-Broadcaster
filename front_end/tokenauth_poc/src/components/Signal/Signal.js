@@ -4,7 +4,7 @@ function Signal({content, userId, signalId, createdAt, username, feed, setFeed, 
 
 //const [test, setTest] = useState(true)
 
-const feedMinusOne = feed.filter((sig) => sig.id !== signalId)
+// const feedMinusOne = feed.filter((sig) => sig.id !== signalId)
 
 function handleLike() {
     console.log(`Patch to 9292/${signalId} coming soon!`)
@@ -31,7 +31,7 @@ function handleDeleteSignal(){
         headers: {"content-type": "application/json"}
     }
   fetch(`http://localhost:9292/broadcasts/${signalId}`, configObj)
-  .then(setFeed(feedMinusOne))
+//   .then(setFeed(feedMinusOne))
   
   //.then(r => r.json)
   //.then(rdata => console.log(rdata))
@@ -39,11 +39,12 @@ function handleDeleteSignal(){
 
 return(
     <div>
-        <p>{username} said {content} at {createdAt} likes: {likes}
+        <p class="cast-card">{username}:<br/>{content} 
+        <br/>{createdAt}</p>
             <button onClick={handleDeleteSignal}>
             X</button>
              <button onClick={handleLike} > 👍</button>
-             <button onClick={() => alert("Boooooooo!")} >👎</button></p>
+             <button onClick={() => alert("Boooooooo!")} >👎</button>
     </div>
 )
 
