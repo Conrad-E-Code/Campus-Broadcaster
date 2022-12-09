@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "../../App.css"
 
 function Signal({content, userId, signalId, createdAt, username, feed, setFeed, likes}){
 
@@ -39,12 +40,13 @@ function handleDeleteSignal(){
 
 return(
     <div>
-        <p class="cast-card">{username}:<br/>{content} 
+        <p className="cast-card">{username}:<br/>{content} 
         <br/>{createdAt}</p>
-            <button onClick={handleDeleteSignal}>
+            <p className="likes">{likes}</p>
+            <button className="delete-button" onClick={handleDeleteSignal}>
             X</button>
-             <button onClick={handleLike} > 👍</button>
-             <button onClick={() => alert("Boooooooo!")} >👎</button>
+             <button className="like-button" onClick={handleLike} > 👍</button>
+             <button className="dislike-button" onClick={() => alert("Boooooooo!")} >👎</button>
     </div>
 )
 

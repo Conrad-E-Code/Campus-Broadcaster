@@ -21,7 +21,7 @@
 }
 .App-header {
   font-family: "DS-DIGIB";
-  background-color: hsl(96, 90%, 31%);
+  background-color: hsl(166, 70%, 62%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,6 +29,8 @@
   font-size: calc(10px + 2vmin);
   color: rgb(14, 15, 14);
   position: relative;
+  width: 80%;
+  margin: auto;
 }
 
 .App-link {
@@ -48,22 +50,22 @@
   font-family: "DS-DIGIB";
   background-color: transparent;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   font-size: 20px;
   color: rgb(14, 15, 14);
   position: relative;
   border-radius: 0px;
-  min-width: 50%;
-  width: 60%;
+  height: 195px;
+  width: 200px;
   margin: auto;
   padding: 10px;
   outline-style: groove;
   outline-width: 0px;
   outline-color: black;
   position: absolute;
-  top: 60px;
+  top: 42px;
   right: 40px;
   left: 30px;
   }
@@ -80,7 +82,7 @@
   color: rgb(14, 15, 14);
   position: relative;
   border-radius: 5px;
-  height: 240px;
+  height: 300px;
   width: 275px;
   margin: auto;
   padding: 10px;
@@ -108,20 +110,89 @@
   background: #be61b8; 
 }
 
-.next-post {
-  background-color: transparent;
+/* .next-post {
+  background-color: grey;
   position: absolute;
-  top: 64%;
-  right: 45%;
+  top: 200px;
+  right: 130px;
   padding: 10px 30px;
   border-color: black;
 }
 
 .previous-post {
-  background-color: transparent;
+  background-color: grey;
   position: absolute;
-  top: 64%;
-  right: 67%;
+  top: 200px;
+  right: 200px;
   padding: 10px 30px;
   border-color: black;
+} */
+
+.down-post {
+  background-color: transparent;
+  position: absolute;
+  top: 160px;
+  right: 15px;
+  padding: 30px 10px;
+  border-color: transparent;
+}
+
+.up-post {
+  background-color: transparent;
+  position: absolute;
+  top: 95px;
+  right: 15px;
+  padding: 30px 10px;
+  border-color: transparent;
+}
+
+.likes {
+  position: absolute;
+  top: 230px
+}
+
+.delete-button {
+  position: absolute;
+  top: 207px;
+  right: 87px;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.like-button {
+  position: absolute;
+  top: 200px;
+  right: 140px;
+  padding: 1px 15px;
+  border-color: grey;
+  background-color: rgb(69, 69, 66);
+  font-size: large;
+}
+
+.dislike-button {
+  position: absolute;
+  top: 200px;
+  right: 200px;
+  padding: 1px 15px;
+  border-color: grey;
+  font-size: large;
+  background-color:rgb(69, 69, 66);
+}
+
+.head {
+  font-family: "DS-DIGIB";
+  background-color: hsl(96, 92%, 60%);
+  
+  border-color: grey;
+  border-radius: 10px;
+  width: 40%;
+  margin: auto;
+}
+
+body {
+  background-color: beige;
+  background-repeat: no-repeat, repeat;
+  height: 800px;
+  background-position: center;
+  background-size: cover;
 }
