@@ -11,12 +11,15 @@ function Dashboard({ token }) {
     return (
       //need a key at some point
       <Signal
+      likes={cast.likes}
         key={cast.id}
         signalId={cast.id}
         content={cast.content}
         userId={cast.user_id}
         createdAt={cast.created_at}
         username={cast.username}
+        setFeed={setFeed}
+        feed={feed}
       />
     );
   });
@@ -65,10 +68,10 @@ function Dashboard({ token }) {
       <p> Hello from the dashboard</p>
       <h2>Campus Broadcasts</h2>
       {/* <img alt="pager" src="https://s.isanook.com/an/0/rp/rc/w300h200/yatxacm1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2FuLzAvdmFsZW50aW5lL3N0YXRpYy9pbWFnZXMvMjAyMi9wYWdlci9wYWdlcl8xLnBuZw==.png"></img> */}
-      <div class="display-card">
-        <button class="previous-post" onClick={handlePrev}></button>
+      <div className="display-card">
+        <button className="previous-post" onClick={handlePrev}></button>
         <br></br>
-        <button class="next-post" onClick={handleNext}></button>
+        <button className="next-post" onClick={handleNext}></button>
         <img
           alt="pager"
           src="https://s.isanook.com/an/0/rp/rc/w300h200/yatxacm1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2FuLzAvdmFsZW50aW5lL3N0YXRpYy9pbWFnZXMvMjAyMi9wYWdlci9wYWdlcl8xLnBuZw==.png"
@@ -84,6 +87,7 @@ function Dashboard({ token }) {
         <Link to="/pictures/new">Post a Pic</Link>
       </button>
       <Link to="/preferences"></Link>
+      <Link to="/pictures">SEE PICS</Link>
     </div>
   );
 }
