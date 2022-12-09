@@ -114,7 +114,7 @@
   top: 64%;
   right: 45%;
   padding: 10px 30px;
-  border-color: transparent transparent
+  border-color: black;
 }
 
 .previous-post {
@@ -123,5 +123,5 @@
   top: 64%;
   right: 67%;
   padding: 10px 30px;
-  border-color: transparent transparent
+  border-color: black;
 }
