@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom"
+import "../../App.css"
 // import NewUser from './components/NewUser/NewUser';
 
 
@@ -13,11 +14,11 @@ function HomePage(props) {
     <div className="home-page">Home 
         <br></br>
         <Link to="/dashboard">
-        <button>Login</button>
+        <button className="home-login">Login</button>
         </Link>
         <br></br>
         <Link to="/users/new">
-        <button>Create Account</button>
+        <button className="home-create">Create Account</button>
         </Link>
         <br></br>
     </div>

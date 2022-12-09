@@ -1,6 +1,6 @@
 import {useNavigate} from "react-router-dom"
 import { useState } from "react";
-
+import "../../App.css"
 
 // we need the user_Id passed into this.
 function BroadcastNews({token}) {
@@ -31,7 +31,7 @@ function BroadcastNews({token}) {
     return (
         <div className="App">
           <form onSubmit={handleBroadcastSubmit}>
-          <label>Share some news:</label>
+          <label className="share-news">Share some news:</label>
           <br></br>
           <textarea
             required="true"

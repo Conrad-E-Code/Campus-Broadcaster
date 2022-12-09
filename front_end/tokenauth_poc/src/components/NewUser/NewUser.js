@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import {useNavigate} from "react-router-dom"
+import "../../App.css"
 
 
 function NewUser(props) {
@@ -36,13 +37,18 @@ const handleSubmit = (e) => {
 }   
     return (
         
-        <div> Create Account <br></br>
+        <div className='new-account'> Create Account <br></br>
         <form onSubmit={handleSubmit}>
+        <br></br>
             <input placeholder="User Name" type="text" onChange={(e) => setNewUser(e.target.value)}></input><br></br>
+            <br></br>
             <input placeholder="User Campus" type="number" onChange={(e) => setNewCampus(e.target.value)}></input><br></br>
+            <br></br>
             <input placeholder="Enter Password" type="text" onChange={(e) => setNewPassword(e.target.value)}></input><br></br>
+            <br></br>
             <input placeholder="ReEnter Password" type="text" onChange={(e) => setRepeatPassword(e.target.value)}></input><br></br>
-            <button>Submit</button>
+            <br></br>
+            <button className='new-submit'>Submit</button>
             
         </form>
         </div>

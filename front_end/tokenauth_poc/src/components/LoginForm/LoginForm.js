@@ -2,6 +2,7 @@ import React from "react"
 import './LoginForm.css'
 import {useState} from "react"
 import PropTypes from 'prop-types'
+import '../../App.css'
 //import {useNavigate} from "react-router-dom"
 //import Dashboard from "../Dashboard/Dashboard"
 //import useToken from "../../useToken"
@@ -62,11 +63,11 @@ const [showBadLogin, setShowBadLogin] = useState(false)
 
     return (
         <div className="login-form-div">
-            <h1>You Must Log In To See This Content!</h1>
-            <h2>Enter Credentials Below
-            </h2>
+            
+            <h2 className="see-this">You Must Log In To See This Content!</h2><br></br>
+            <h2 className="credentials">Enter Credentials Below</h2><br></br>
             <form onSubmit={(e) => handleSubmit(e)} className="login-form">
-                <label> Enter Username:
+                <label className="enter-username"> Enter Username:
                     <input  onChange={(e) => {
                         setFormUser(e.target.value)
                        // console.log(e.target.value)
@@ -75,7 +76,7 @@ const [showBadLogin, setShowBadLogin] = useState(false)
                     </input>
                 </label>
                 <br />
-                <label> Enter Password:
+                <label className="enter-password"> Enter Password:
                     <input  onChange={(e) => {SetFormPass(e.target.value)
                     //console.log(e.target.value)
                     //console.log(formPass)
@@ -84,7 +85,7 @@ const [showBadLogin, setShowBadLogin] = useState(false)
                 </label>
                 <br />
                 {showBadLogin? <p className="red-text">BAD LOGIN ATTEMPT!</p> : null}
-                <button className="login-input" type="submit"> Login
+                <button id="login-form-button"className="login-input" type="submit"> Login
                 </button>
             </form>
         </div>
