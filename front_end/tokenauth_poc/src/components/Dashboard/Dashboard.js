@@ -1,7 +1,7 @@
 import "../../App.css";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Channel from "../Channel/Channel";
+
 import Signal from "../Signal/Signal";
 
 function Dashboard({ token }) {
@@ -99,7 +99,7 @@ function Dashboard({ token }) {
         ></img>
         {mappedFeed[counter]}
       </div>
-      <Channel />
+      
       <br></br>
       <button>
         <Link to="/broadcasts/new">Share it!</Link>
