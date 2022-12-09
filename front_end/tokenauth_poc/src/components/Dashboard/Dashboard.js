@@ -47,32 +47,32 @@ function Dashboard({ token }) {
   }, []);
 
     const [counter, setCounter] = useState(0);
-  function handleNext() {
-    // console.log("next")
-    if (counter >= 0) {
-      setCounter(counter + 1);
-    }
-    console.log("next", counter);
-  }
+//   function handleNext() {
+//     // console.log("next")
+//     if (counter >= -Infinity) {
+//       setCounter(counter + 1);
+//     }
+//     console.log("next", counter);
+//   }
 
-  function handlePrev() {
-    // console.log("previous")
-    if (counter < Infinity) {
-      setCounter(counter - 1);
-    }
-    console.log("previous", counter);
-  }
+//   function handlePrev() {
+//     // console.log("previous")
+//     if (counter < Infinity) {
+//       setCounter(counter - 1);
+//     }
+//     console.log("previous", counter);
+//   }
   
   function handleDown() {
-    // console.log("next")
-    if (counter >= 0) {
+    // console.log("down")
+    if (counter >= -Infinity) {
       setCounter(counter + 1);
     }
     console.log("Down", counter);
   }
 
   function handleUp() {
-    // console.log("previous")
+    // console.log("up")
     if (counter < Infinity) {
       setCounter(counter - 1);
     }
@@ -81,19 +81,21 @@ function Dashboard({ token }) {
 
   return (
     <div className="dashboard">
-      <p> Hello from the dashboard</p>
-      <h2>Campus Broadcasts</h2>
+      <br></br>
+      <h2 className="head">BroadCaster</h2>
+      <br></br>
       {/* <img alt="pager" src="https://s.isanook.com/an/0/rp/rc/w300h200/yatxacm1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2FuLzAvdmFsZW50aW5lL3N0YXRpYy9pbWFnZXMvMjAyMi9wYWdlci9wYWdlcl8xLnBuZw==.png"></img> */}
       <div className="display-card">
-        
-        <button className="previous-post" onClick={handlePrev}></button>
+      {/* <p>Campus Broadcasts</p> */}
+        {/* <button className="previous-post" onClick={handlePrev}></button>
         <br></br>
-        <button className="next-post" onClick={handleNext}></button>
+        <button className="next-post" onClick={handleNext}></button> */}
         <br></br>
         <button className="up-post" onClick={handleUp}></button>
         <br></br>
         <button className="down-post" onClick={handleDown}></button>
         <img
+            className="pager"
           alt="pager"
           src="https://s.isanook.com/an/0/rp/rc/w300h200/yatxacm1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2FuLzAvdmFsZW50aW5lL3N0YXRpYy9pbWFnZXMvMjAyMi9wYWdlci9wYWdlcl8xLnBuZw==.png"
         ></img>
