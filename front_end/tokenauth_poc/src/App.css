@@ -55,15 +55,15 @@
   color: rgb(14, 15, 14);
   position: relative;
   border-radius: 0px;
-  min-width: 50%;
-  width: 60%;
+  height: 188px;
+  width: 200px;
   margin: auto;
   padding: 10px;
   outline-style: groove;
   outline-width: 0px;
   outline-color: black;
   position: absolute;
-  top: 60px;
+  top: 42px;
   right: 40px;
   left: 30px;
   }
@@ -80,7 +80,7 @@
   color: rgb(14, 15, 14);
   position: relative;
   border-radius: 5px;
-  height: 240px;
+  height: 300px;
   width: 275px;
   margin: auto;
   padding: 10px;
@@ -111,8 +111,8 @@
 .next-post {
   background-color: transparent;
   position: absolute;
-  top: 64%;
-  right: 45%;
+  top: 200px;
+  right: 130px;
   padding: 10px 30px;
   border-color: black;
 }
@@ -120,8 +120,26 @@
 .previous-post {
   background-color: transparent;
   position: absolute;
-  top: 64%;
-  right: 67%;
+  top: 200px;
+  right: 200px;
   padding: 10px 30px;
+  border-color: black;
+}
+
+.down-post {
+  background-color: transparent;
+  position: absolute;
+  top: 160px;
+  right: 15px;
+  padding: 30px 10px;
+  border-color: black;
+}
+
+.up-post {
+  background-color: transparent;
+  position: absolute;
+  top: 95px;
+  right: 15px;
+  padding: 30px 10px;
   border-color: black;
 }
