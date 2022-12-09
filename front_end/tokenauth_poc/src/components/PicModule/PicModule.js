@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 
 
-function PicModule({image_url, user_id, id, token}){
+function PicModule({filterlikes, image_url, user_id, id, token}){
 
 
     function handlePicLike(){
@@ -24,6 +24,11 @@ return(
     <div>
     <img src={`${image_url}`} alt={user_id}/>
     <button onClick={() => handlePicLike()}>Like</button>
+    <ul>
+        {filterlikes.map((fl) => {
+            return <li key={`${fl.id}-plid`}> {`${fl.liker_user} likes this`}</li>
+        })}
+    </ul>
     </div>
 )
 
