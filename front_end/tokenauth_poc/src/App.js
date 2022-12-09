@@ -2,7 +2,7 @@ import './App.css';
 import { Routes, Route, Link,} from "react-router-dom"
 import LoginForm from './components/LoginForm/LoginForm';
 import Dashboard from './components/Dashboard/Dashboard';
-import Preferences from './components/Preferences/Preferences';
+import Pictures from './components/Pictures/Pictures';
 import useToken from './useToken';
 import NewUser from './components/NewUser/NewUser';
 import HomePage from './components/HomePage/HomePage';
@@ -48,8 +48,8 @@ function App() {
       <Routes>
         <Route element={token? <Dashboard token={token}/> :
         <LoginForm token={token}setFormUser={setFormUser} formUser={formUser} setToken={setToken} />} path="/dashboard"></Route>
-        <Route element={token? <Preferences/> :
-        <LoginForm token={token}setFormUser={setFormUser} formUser={formUser} setToken={setToken} />} path="/preferences"></Route>
+        <Route element={token? <Pictures token={token}/> :
+        <LoginForm token={token}setFormUser={setFormUser} formUser={formUser} setToken={setToken} />} path="/pictures"></Route>
         <Route element={token? <BroadcastNews token={token}/> :
         <LoginForm token={token} setFormUser={setFormUser} formUser={formUser} setToken={setToken} />} path="/broadcasts/new"></Route>
         <Route element={<NewUser/>} path="/users/new"></Route>

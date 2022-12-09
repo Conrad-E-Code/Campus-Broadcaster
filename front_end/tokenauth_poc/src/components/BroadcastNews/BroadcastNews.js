@@ -12,7 +12,8 @@ function BroadcastNews({token}) {
         e.preventDefault();
         const BroadcastObj = {
           content: content,
-          user_id: token
+          user_id: token,
+          likes: 0
         }
         const configObj = {
             method: 'POST', 
