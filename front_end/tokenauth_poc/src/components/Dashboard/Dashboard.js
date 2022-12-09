@@ -112,8 +112,10 @@ function Dashboard({ token }) {
       <br></br>
       <Link to="/preferences"></Link>
 
+
       <Link to="/pictures" className='picture-link'>SEE PICS</Link>
       <br></br>
+
     </div>
   );
 }

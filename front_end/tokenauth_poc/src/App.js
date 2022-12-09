@@ -42,11 +42,18 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h2>Campus Broadcaster</h2>
+
         
+      
+
+        <Link to="/dashboard">BACK TO DASHBOARD</Link>
         {/* <button onClick={() => console.log(token)} >Try Me!</button> */}
       {/* {token? null :<LoginForm setToken={setToken} />} */}
       </header>
-      <br></br>
+      {token? <button className="logout" onClick={() => {sessionStorage.clear()
+      document.location.reload()}}>Logout</button> : null}
+      {token? null:<Link to="/">Create an Account</Link>}
+
       <Routes>
         <Route element={token? <Dashboard token={token}/> :
         <LoginForm token={token}setFormUser={setFormUser} formUser={formUser} setToken={setToken} />} path="/dashboard"></Route>
@@ -60,8 +67,7 @@ function App() {
         <Route element={token?<Dashboard token={token}/>:<HomePage/>} path="/"></Route>
         
       </Routes>
-      {token? <button className="logout"onClick={() => {sessionStorage.clear()
-      document.location.reload()}}>Logout</button> : null}
+
     </div>
   );
   }
